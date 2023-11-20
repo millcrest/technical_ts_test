@@ -1,0 +1,119 @@
+body {
+  background-color: #121212; /* Softer black for dark theme */
+  color: #e0e0e0; /* Soft white for text */
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif; /* Optional: Improve font readability */
+}
+
+#inner {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  flex: 1;
+  background-color: #1e1e1e; /* Dark background for table */
+}
+
+#gameLog {
+  flex: 1;
+}
+
+#gameData {
+  flex: 1;
+}
+
+.matchup {
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #00bcd4; /* Cyan background */
+  color: #121212; /* Dark text for contrast */
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.5s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-away {
+  animation: animateBannerAway 1s ease forwards;
+}
+
+@keyframes animateBannerAway {
+  0% {
+    background-color: #00bcd4;
+    padding: 15px;
+    color: #121212;
+  }
+  100% {
+    background-color: #2a2a2a;
+    padding: 5px;
+    color: #666; /* Muted text color */
+  }
+}
+
+.round {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #333; /* Softer border color */
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Dark background for round */
+}
+
+.game {
+  background-color: #2a2a2a; /* Darker shade for game boxes */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.game p {
+  margin: 5px 0;
+  color: #e0e0e0; /* Soft white for text inside game box */
+}
+
+table,
+th,
+td {
+  border: 1px solid #333; /* Softer border color */
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  color: #e0e0e0; /* Soft white for text in table */
+}
+
+th {
+  background-color: #00bcd4; /* Cyan for headers */
+  color: #121212; /* Dark text color for contrast */
+}
+
+tr:nth-child(even) {
+  background-color: #2a2a2a; /* Darker shade for alternate rows */
+}
+
+tr:hover {
+  background-color: #333; /* Slightly lighter for hover */
+}
